@@ -96,15 +96,15 @@ const Sidebar: React.FC<SidebarProps> = ({ sidebarOpen, activeTab, setActiveTab 
                                     onClick={() => setActiveTab(item.id)}
                                     className={`group w-full flex items-center px-3 py-3 text-right rtl:text-right ltr:text-left rounded-lg transition-all duration-200 ${
                                         isActive 
-                                            ? 'bg-white/10 text-white shadow-lg border-r-2 rtl:border-r-2 ltr:border-l-2 border-white' 
-                                            : 'text-white/70 hover:text-white hover:bg-white/5'
+                                            ? 'bg-accent-primary/10 text-accent-primary shadow-lg border-r-2 rtl:border-r-2 ltr:border-l-2 border-accent-primary' 
+                                            : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
                                     }`}
                                     title={item.description}
                                 >
                                     <div className={`p-2 rounded-lg transition-all duration-200 ${
                                         isActive 
-                                            ? 'bg-white/20 text-white' 
-                                            : 'text-white/70 group-hover:text-white group-hover:bg-white/10'
+                                            ? 'bg-accent-primary/20 text-accent-primary' 
+                                            : 'text-text-tertiary group-hover:text-text-primary group-hover:bg-bg-tertiary'
                                     }`}>
                                         <Icon className="h-5 w-5" />
                                     </div>
@@ -113,7 +113,7 @@ const Sidebar: React.FC<SidebarProps> = ({ sidebarOpen, activeTab, setActiveTab 
                                     {/* Active indicator */}
                                     {isActive && (
                                         <div className="ml-auto rtl:ml-auto ltr:mr-auto">
-                                            <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                                            <div className="w-2 h-2 bg-accent-primary rounded-full animate-pulse" />
                                         </div>
                                     )}
                                 </button>
@@ -123,10 +123,10 @@ const Sidebar: React.FC<SidebarProps> = ({ sidebarOpen, activeTab, setActiveTab 
                 </nav>
 
                 {/* Footer */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-white/10">
+                <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-border-primary">
                     <div className="text-center">
-                        <p className="text-white/60 text-xs">Version 2.0.0</p>
-                        <p className="text-white/40 text-xs mt-1">© 2024 Pars Wholesale</p>
+                        <p className="text-text-tertiary text-xs">Version 2.0.0</p>
+                        <p className="text-text-muted text-xs mt-1">© 2024 Pars Wholesale</p>
                     </div>
                 </div>
             </div>

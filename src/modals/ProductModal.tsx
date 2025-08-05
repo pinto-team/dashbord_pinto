@@ -1,5 +1,5 @@
 // components/ProductModal.tsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 interface ProductModalProps {
     onClose: () => void;
@@ -18,6 +18,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ onClose, product }) => {
         price: '',
         stock: ''
     });
+    const modalRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         if (product) {
@@ -29,6 +30,28 @@ const ProductModal: React.FC<ProductModalProps> = ({ onClose, product }) => {
             });
         }
     }, [product]);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+                onClose();
+            }
+        };
+
+        const handleEscapeKey = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') {
+                onClose();
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('keydown', handleEscapeKey);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('keydown', handleEscapeKey);
+        };
+    }, [onClose]);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -46,8 +69,8 @@ const ProductModal: React.FC<ProductModalProps> = ({ onClose, product }) => {
     };
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 w-full max-w-md">
+        <div className="fixed inset-0 bg-bg-overlay z-50 flex items-center justify-center">
+            <div ref={modalRef} className="bg-bg-card rounded-lg p-6 w-full max-w-md shadow-xl border border-border-primary">
                 <h3 className="text-lg font-semibold mb-4">
                     {product ? 'ویرایش محصول' : 'افزودن محصول جدید'}
                 </h3>
@@ -58,7 +81,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ onClose, product }) => {
                         placeholder="نام محصول"
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="w-full p-2 border border-gray-300 rounded-md"
+                        className="input"
                         required
                     />
                     <input
@@ -67,7 +90,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ onClose, product }) => {
                         placeholder="دسته‌بندی"
                         value={formData.category}
                         onChange={handleInputChange}
-                        className="w-full p-2 border border-gray-300 rounded-md"
+                        className="input"
                         required
                     />
                     <input
@@ -76,7 +99,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ onClose, product }) => {
                         placeholder="قیمت"
                         value={formData.price}
                         onChange={handleInputChange}
-                        className="w-full p-2 border border-gray-300 rounded-md"
+                        className="input"
                         min="0"
                         required
                     />
@@ -86,7 +109,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ onClose, product }) => {
                         placeholder="موجودی"
                         value={formData.stock}
                         onChange={handleInputChange}
-                        className="w-full p-2 border border-gray-300 rounded-md"
+                        className="input"
                         min="0"
                         required
                     />
@@ -94,13 +117,13 @@ const ProductModal: React.FC<ProductModalProps> = ({ onClose, product }) => {
                         <button
                             type="button"
                             onClick={onClose}
-                            className="px-4 py-2 text-gray-600 hover:text-gray-800"
+                            className="btn btn-secondary"
                         >
                             انصراف
                         </button>
                         <button
                             type="submit"
-                            className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
+                            className="btn btn-success"
                         >
                             ذخیره
                         </button>

@@ -17,7 +17,7 @@
   --bg-primary: #ffffff;
   --bg-secondary: #f8fafc;
   --bg-tertiary: #f1f5f9;
-  --bg-sidebar: #1e293b;
+  --bg-sidebar: #f8fafc;
   --bg-card: #ffffff;
   --bg-overlay: rgba(0, 0, 0, 0.5);
   
@@ -79,7 +79,7 @@
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
   --bg-tertiary: #334155;
-  --bg-sidebar: #020617;
+  --bg-sidebar: #1e293b;
   --bg-card: #1e293b;
   --bg-overlay: rgba(0, 0, 0, 0.7);
   

@@ -1,5 +1,5 @@
 // components/BundleModal.tsx
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { products } from '../data/mockData';
 
 interface BundleModalProps {
@@ -10,6 +10,29 @@ const BundleModal: React.FC<BundleModalProps> = ({ onClose }) => {
     const [bundleName, setBundleName] = useState('');
     const [bundlePrice, setBundlePrice] = useState('');
     const [selectedProducts, setSelectedProducts] = useState<number[]>([]);
+    const modalRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+                onClose();
+            }
+        };
+
+        const handleEscapeKey = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') {
+                onClose();
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('keydown', handleEscapeKey);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('keydown', handleEscapeKey);
+        };
+    }, [onClose]);
 
     const handleProductToggle = (productId: number) => {
         setSelectedProducts(prev => 
@@ -31,8 +54,8 @@ const BundleModal: React.FC<BundleModalProps> = ({ onClose }) => {
     };
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg p-6 w-full max-w-lg">
+        <div className="fixed inset-0 bg-bg-overlay z-50 flex items-center justify-center">
+            <div ref={modalRef} className="bg-bg-card rounded-lg p-6 w-full max-w-lg shadow-xl border border-border-primary">
                 <h3 className="text-lg font-semibold mb-4">ساخت بسته ترکیبی</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <input
@@ -40,11 +63,11 @@ const BundleModal: React.FC<BundleModalProps> = ({ onClose }) => {
                         placeholder="نام بسته"
                         value={bundleName}
                         onChange={(e) => setBundleName(e.target.value)}
-                        className="w-full p-2 border border-gray-300 rounded-md"
+                        className="input"
                         required
                     />
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-text-secondary mb-2">
                             انتخاب محصولات:
                         </label>
                         <div className="space-y-2 max-h-40 overflow-y-auto">
@@ -56,7 +79,7 @@ const BundleModal: React.FC<BundleModalProps> = ({ onClose }) => {
                                         checked={selectedProducts.includes(product.id)}
                                         onChange={() => handleProductToggle(product.id)}
                                     />
-                                    <span className="text-sm">{product.name}</span>
+                                    <span className="text-sm text-text-primary">{product.name}</span>
                                 </label>
                             ))}
                         </div>
@@ -66,7 +89,7 @@ const BundleModal: React.FC<BundleModalProps> = ({ onClose }) => {
                         placeholder="قیمت بسته"
                         value={bundlePrice}
                         onChange={(e) => setBundlePrice(e.target.value)}
-                        className="w-full p-2 border border-gray-300 rounded-md"
+                        className="input"
                         min="0"
                         required
                     />
@@ -74,13 +97,13 @@ const BundleModal: React.FC<BundleModalProps> = ({ onClose }) => {
                         <button
                             type="button"
                             onClick={onClose}
-                            className="px-4 py-2 text-gray-600 hover:text-gray-800"
+                            className="btn btn-secondary"
                         >
                             انصراف
                         </button>
                         <button
                             type="submit"
-                            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                            className="btn btn-primary"
                         >
                             ساخت بسته
                         </button>
