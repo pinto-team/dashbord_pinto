@@ -1,5 +1,6 @@
 // App.tsx
 import React, { useState } from 'react';
+import { useApp } from './contexts/AppContext';
 
 // Components
 import Sidebar from './components/Sidebar';
@@ -26,6 +27,7 @@ interface Product {
 }
 
 const App: React.FC = () => {
+    const { isRTL } = useApp();
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [activeTab, setActiveTab] = useState('dashboard');
 
@@ -55,14 +57,14 @@ const App: React.FC = () => {
     };
 
     return (
-        <div className="flex h-screen bg-gray-100" dir="rtl">
+        <div className={`flex h-screen bg-bg-primary transition-colors duration-300`} dir={isRTL ? 'rtl' : 'ltr'}>
             <Sidebar
                 sidebarOpen={sidebarOpen}
                 activeTab={activeTab}
                 setActiveTab={setActiveTab}
             />
 
-            {/* موبایل - پس‌زمینه بلر شده */}
+            {/* Mobile - Blurred background */}
             {sidebarOpen && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-25 z-40 lg:hidden"
@@ -76,7 +78,7 @@ const App: React.FC = () => {
                     setSidebarOpen={setSidebarOpen}
                 />
 
-                <main className="flex-1 overflow-x-hidden overflow-y-auto p-6 bg-gray-100">
+                <main className="flex-1 overflow-x-hidden overflow-y-auto p-6 bg-bg-primary">
                     <div className="max-w-7xl mx-auto">
                         {renderActiveTab()}
                     </div>
