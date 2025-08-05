@@ -6,7 +6,7 @@ import { useApp } from '../contexts/AppContext';
 
 const LanguageToggle: React.FC = () => {
     const { t } = useTranslation();
-    const { isRTL, toggleLanguage } = useApp();
+    const { language, setLanguage } = useApp();
     const [showDropdown, setShowDropdown] = useState(false);
 
     const languages = [
@@ -14,10 +14,10 @@ const LanguageToggle: React.FC = () => {
         { code: 'fa', name: 'فارسی', flag: '🇮🇷', dir: 'rtl' },
     ];
 
-    const currentLanguage = languages.find(lang => lang.dir === (isRTL ? 'rtl' : 'ltr'));
+    const currentLanguage = languages.find(lang => lang.code === language);
 
     const handleLanguageChange = (languageCode: string) => {
-        toggleLanguage();
+        setLanguage(languageCode);
         setShowDropdown(false);
     };
 

@@ -202,15 +202,15 @@ body {
 }
 
 .btn-success {
-  @apply bg-accent-success text-text-inverse hover:bg-accent-success/90 focus:ring-accent-success;
+  @apply bg-accent-success text-text-inverse hover:bg-accent-success focus:ring-accent-success;
 }
 
 .btn-warning {
-  @apply bg-accent-warning text-text-inverse hover:bg-accent-warning/90 focus:ring-accent-warning;
+  @apply bg-accent-warning text-text-inverse hover:bg-accent-warning focus:ring-accent-warning;
 }
 
 .btn-error {
-  @apply bg-accent-error text-text-inverse hover:bg-accent-error/90 focus:ring-accent-error;
+  @apply bg-accent-error text-text-inverse hover:bg-accent-error focus:ring-accent-error;
 }
 
 /* Card Styles */
@@ -246,23 +246,23 @@ body {
 }
 
 .badge-pending {
-  @apply bg-status-pending/10 text-status-pending;
+  @apply bg-status-pending text-status-pending;
 }
 
 .badge-processing {
-  @apply bg-status-processing/10 text-status-processing;
+  @apply bg-status-processing text-status-processing;
 }
 
 .badge-shipped {
-  @apply bg-status-shipped/10 text-status-shipped;
+  @apply bg-status-shipped text-status-shipped;
 }
 
 .badge-delivered {
-  @apply bg-status-delivered/10 text-status-delivered;
+  @apply bg-status-delivered text-status-delivered;
 }
 
 .badge-cancelled {
-  @apply bg-status-cancelled/10 text-status-cancelled;
+  @apply bg-status-cancelled text-status-cancelled;
 }
 
 /* Animation Classes */

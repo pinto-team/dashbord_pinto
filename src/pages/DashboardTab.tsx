@@ -2,7 +2,7 @@
 import React from 'react';
 import StatsCards from '../components/StatsCards';
 import BestSellers from '../components/BestSellers';
-import { stats, products } from '../data/mockData';
+import { products } from '../data/mockData';
 
 const DashboardTab: React.FC = () => {
     return (
@@ -12,7 +12,7 @@ const DashboardTab: React.FC = () => {
                 <p className="text-gray-600">خلاصه‌ای از فعالیت‌های کسب و کار شما</p>
             </div>
 
-            <StatsCards stats={stats} />
+            <StatsCards />
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="bg-white rounded-lg shadow p-6">

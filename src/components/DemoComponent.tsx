@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useApp } from '../contexts/AppContext';
-import { formatNumber, formatCurrency, toPersianDigits } from '../utils/numbers';
+import { formatNumber, formatCurrency } from '../utils/numbers';
 
 const DemoComponent: React.FC = () => {
   const { t } = useTranslation();
