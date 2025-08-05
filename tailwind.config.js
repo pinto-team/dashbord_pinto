@@ -6,122 +6,114 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        // Cursor-inspired color palette
+        cursor: {
+          primary: '#6366f1',
+          'primary-hover': '#4f46e5',
+          'primary-light': '#818cf8',
+          'primary-dark': '#3730a3',
+          bg: {
+            primary: '#0a0a0a',
+            secondary: '#1a1a1a',
+            tertiary: '#2a2a2a',
+            card: '#1e1e1e',
+            sidebar: '#0f0f0f',
+          },
+          text: {
+            primary: '#ffffff',
+            secondary: '#a1a1aa',
+            tertiary: '#71717a',
+            muted: '#52525b',
+            inverse: '#0a0a0a',
+          },
+          border: {
+            primary: '#27272a',
+            secondary: '#3f3f46',
+            focus: '#6366f1',
+          },
+          accent: {
+            success: '#10b981',
+            warning: '#f59e0b',
+            error: '#ef4444',
+            info: '#06b6d4',
+          },
+          selection: 'rgba(99, 102, 241, 0.2)',
+          highlight: 'rgba(99, 102, 241, 0.1)',
+        },
+      },
+      backgroundImage: {
+        'cursor-gradient-primary': 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+        'cursor-gradient-secondary': 'linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%)',
+        'cursor-gradient-card': 'linear-gradient(135deg, #1e1e1e 0%, #262626 100%)',
+        'cursor-gradient-sidebar': 'linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%)',
+      },
       fontFamily: {
-        'iransans': ['IRANSansX', 'system-ui', 'sans-serif'],
-        'iransansx': ['IRANSansX', 'system-ui', 'sans-serif'],
-        'sans': ['IRANSansX', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
+        'cursor': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        'cursor-mono': ['JetBrains Mono', 'Fira Code', 'Cascadia Code', 'monospace'],
       },
       fontSize: {
-        'xs': ['0.75rem', { lineHeight: '1rem' }],
-        'sm': ['0.875rem', { lineHeight: '1.25rem' }],
-        'base': ['1rem', { lineHeight: '1.5rem' }],
-        'lg': ['1.125rem', { lineHeight: '1.75rem' }],
-        'xl': ['1.25rem', { lineHeight: '1.75rem' }],
-        '2xl': ['1.5rem', { lineHeight: '2rem' }],
-        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-        '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-        '5xl': ['3rem', { lineHeight: '1' }],
-        '6xl': ['3.75rem', { lineHeight: '1' }],
+        'cursor-xs': '0.75rem',
+        'cursor-sm': '0.875rem',
+        'cursor-base': '1rem',
+        'cursor-lg': '1.125rem',
+        'cursor-xl': '1.25rem',
+        'cursor-2xl': '1.5rem',
+        'cursor-3xl': '1.875rem',
+        'cursor-4xl': '2.25rem',
       },
-      colors: {
-        // Enhanced Theme colors using CSS custom properties
-        'bg-primary': 'var(--bg-primary)',
-        'bg-secondary': 'var(--bg-secondary)',
-        'bg-tertiary': 'var(--bg-tertiary)',
-        'bg-sidebar': 'var(--bg-sidebar)',
-        'bg-card': 'var(--bg-card)',
-        'bg-overlay': 'var(--bg-overlay)',
-        
-        'text-primary': 'var(--text-primary)',
-        'text-secondary': 'var(--text-secondary)',
-        'text-tertiary': 'var(--text-tertiary)',
-        'text-inverse': 'var(--text-inverse)',
-        'text-muted': 'var(--text-muted)',
-        
-        'border-primary': 'var(--border-primary)',
-        'border-secondary': 'var(--border-secondary)',
-        'border-focus': 'var(--border-focus)',
-        
-        'accent-primary': 'var(--accent-primary)',
-        'accent-primary-hover': 'var(--accent-primary-hover)',
-        'accent-secondary': 'var(--accent-secondary)',
-        'accent-success': 'var(--accent-success)',
-        'accent-warning': 'var(--accent-warning)',
-        'accent-error': 'var(--accent-error)',
-        'accent-info': 'var(--accent-info)',
-        
-        'status-pending': 'var(--status-pending)',
-        'status-processing': 'var(--status-processing)',
-        'status-shipped': 'var(--status-shipped)',
-        'status-delivered': 'var(--status-delivered)',
-        'status-cancelled': 'var(--status-cancelled)',
+      fontWeight: {
+        'cursor-light': '300',
+        'cursor-normal': '400',
+        'cursor-medium': '500',
+        'cursor-semibold': '600',
+        'cursor-bold': '700',
       },
       spacing: {
-        'xs': 'var(--spacing-xs)',
-        'sm': 'var(--spacing-sm)',
-        'md': 'var(--spacing-md)',
-        'lg': 'var(--spacing-lg)',
-        'xl': 'var(--spacing-xl)',
-        '2xl': 'var(--spacing-2xl)',
+        'cursor-1': '0.25rem',
+        'cursor-2': '0.5rem',
+        'cursor-3': '0.75rem',
+        'cursor-4': '1rem',
+        'cursor-5': '1.25rem',
+        'cursor-6': '1.5rem',
+        'cursor-8': '2rem',
+        'cursor-10': '2.5rem',
+        'cursor-12': '3rem',
+        'cursor-16': '4rem',
+        'cursor-20': '5rem',
+        'cursor-24': '6rem',
       },
       borderRadius: {
-        'sm': 'var(--radius-sm)',
-        'md': 'var(--radius-md)',
-        'lg': 'var(--radius-lg)',
-        'xl': 'var(--radius-xl)',
-        '2xl': 'var(--radius-2xl)',
+        'cursor-sm': '0.25rem',
+        'cursor-md': '0.375rem',
+        'cursor-lg': '0.5rem',
+        'cursor-xl': '0.75rem',
+        'cursor-2xl': '1rem',
       },
       boxShadow: {
-        'sm': 'var(--shadow-sm)',
-        'md': 'var(--shadow-md)',
-        'lg': 'var(--shadow-lg)',
-        'xl': 'var(--shadow-xl)',
+        'cursor-sm': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+        'cursor-md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+        'cursor-lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        'cursor-xl': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+        'cursor-glow': '0 0 20px rgba(99, 102, 241, 0.3)',
       },
       transitionDuration: {
-        'fast': 'var(--transition-fast)',
-        'normal': 'var(--transition-normal)',
-        'slow': 'var(--transition-slow)',
+        'cursor-fast': '150ms',
+        'cursor-normal': '250ms',
+        'cursor-slow': '350ms',
       },
-      animation: {
-        'fade-in': 'fadeIn 0.3s ease-in-out',
-        'slide-in-right': 'slideInRight 0.3s ease-out',
-        'slide-in-left': 'slideInLeft 0.3s ease-out',
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      transitionTimingFunction: {
+        'cursor-out': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        'cursor-in': 'cubic-bezier(0.4, 0, 1, 1)',
       },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        slideInRight: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(0)' },
-        },
-        slideInLeft: {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(0)' },
-        },
-      },
-      backdropBlur: {
-        'xs': '2px',
+      screens: {
+        'cursor-sm': '640px',
+        'cursor-md': '768px',
+        'cursor-lg': '1024px',
+        'cursor-xl': '1280px',
+        'cursor-2xl': '1536px',
       },
     },
   },
-  plugins: [
-    // Custom plugin for better RTL support
-    function({ addUtilities }) {
-      const newUtilities = {
-        '.rtl': {
-          direction: 'rtl',
-        },
-        '.ltr': {
-          direction: 'ltr',
-        },
-        '.text-balance': {
-          textWrap: 'balance',
-        },
-      }
-      addUtilities(newUtilities)
-    }
-  ],
+  plugins: [],
 }
