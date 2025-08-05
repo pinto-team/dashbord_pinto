@@ -10,7 +10,7 @@
     "edit": "ویرایش",
     "delete": "حذف",
     "save": "ذخیره",
-    "cancel": "انصراف",
+    "cancel": "لغو",
     "close": "بستن",
     "search": "جستجو",
     "filter": "فیلتر",
@@ -31,7 +31,43 @@
     "unit": "واحد",
     "supplier": "تامین‌کننده",
     "image": "تصویر",
-    "description": "توضیحات"
+    "description": "توضیحات",
+    "profile": "پروفایل",
+    "settings": "تنظیمات",
+    "logout": "خروج",
+    "view": "مشاهده",
+    "update": "بروزرسانی",
+    "create": "ایجاد",
+    "remove": "حذف",
+    "confirm": "تایید",
+    "back": "بازگشت",
+    "next": "بعدی",
+    "previous": "قبلی",
+    "submit": "ارسال",
+    "reset": "بازنشانی",
+    "download": "دانلود",
+    "upload": "آپلود",
+    "export": "خروجی",
+    "import": "ورودی",
+    "refresh": "تازه‌سازی",
+    "sort": "مرتب‌سازی",
+    "select": "انتخاب",
+    "all": "همه",
+    "none": "هیچ‌کدام",
+    "yes": "بله",
+    "no": "خیر",
+    "ok": "تایید",
+    "error": "خطا",
+    "success": "موفقیت",
+    "warning": "هشدار",
+    "info": "اطلاعات"
+  },
+  "sidebar": {
+    "dashboardDesc": "مشاهده خلاصه و آمار",
+    "productsDesc": "مدیریت موجودی محصولات",
+    "customersDesc": "مشاهده اطلاعات مشتریان",
+    "ordersDesc": "مدیریت سفارشات در انتظار",
+    "historyDesc": "مشاهده تاریخچه سفارشات"
   },
   "dashboard": {
     "title": "داشبورد",
@@ -44,7 +80,14 @@
     "salesChart": "نمودار فروش",
     "thisMonth": "این ماه",
     "lastMonth": "ماه گذشته",
-    "thisYear": "امسال"
+    "thisYear": "امسال",
+    "overview": "خلاصه",
+    "analytics": "تحلیل‌ها",
+    "quickActions": "عملیات سریع",
+    "recentActivity": "فعالیت‌های اخیر",
+    "performance": "عملکرد",
+    "trends": "روندها",
+    "insights": "بینش‌ها"
   },
   "products": {
     "title": "محصولات",
@@ -59,7 +102,16 @@
     "productDescription": "توضیحات محصول",
     "lowStock": "موجودی کم",
     "outOfStock": "ناموجود",
-    "inStock": "موجود"
+    "inStock": "موجود",
+    "manageProducts": "مدیریت محصولات",
+    "productDetails": "جزئیات محصول",
+    "inventory": "موجودی",
+    "categories": "دسته‌بندی‌ها",
+    "suppliers": "تامین‌کنندگان",
+    "barcode": "بارکد",
+    "sku": "کد محصول",
+    "weight": "وزن",
+    "dimensions": "ابعاد"
   },
   "customers": {
     "title": "مشتریان",
@@ -68,8 +120,16 @@
     "customerPhone": "تلفن مشتری",
     "customerAddress": "آدرس مشتری",
     "totalOrders": "کل سفارشات",
-    "totalSpent": "کل هزینه‌شده",
-    "lastOrder": "آخرین سفارش"
+    "totalSpent": "کل هزینه",
+    "lastOrder": "آخرین سفارش",
+    "customerDetails": "جزئیات مشتری",
+    "customerList": "لیست مشتریان",
+    "addCustomer": "افزودن مشتری",
+    "editCustomer": "ویرایش مشتری",
+    "customerType": "نوع مشتری",
+    "registrationDate": "تاریخ ثبت‌نام",
+    "preferences": "ترجیحات",
+    "notes": "یادداشت‌ها"
   },
   "orders": {
     "title": "سفارشات",
@@ -83,7 +143,15 @@
     "processing": "در حال پردازش",
     "shipped": "ارسال شده",
     "delivered": "تحویل داده شده",
-    "cancelled": "لغو شده"
+    "cancelled": "لغو شده",
+    "orderDetails": "جزئیات سفارش",
+    "orderItems": "موارد سفارش",
+    "shippingAddress": "آدرس ارسال",
+    "billingAddress": "آدرس صورتحساب",
+    "paymentMethod": "روش پرداخت",
+    "trackingNumber": "شماره پیگیری",
+    "estimatedDelivery": "تاریخ تحویل تخمینی",
+    "orderNotes": "یادداشت‌های سفارش"
   },
   "modals": {
     "addProduct": "افزودن محصول",
@@ -93,15 +161,52 @@
     "confirmDelete": "تایید حذف",
     "deleteMessage": "آیا مطمئن هستید که می‌خواهید این مورد را حذف کنید؟",
     "yes": "بله",
-    "no": "خیر"
+    "no": "خیر",
+    "saveChanges": "ذخیره تغییرات",
+    "discardChanges": "لغو تغییرات",
+    "loading": "در حال بارگذاری...",
+    "success": "موفقیت",
+    "error": "خطا"
   },
   "theme": {
     "light": "روشن",
     "dark": "تیره",
-    "system": "سیستم"
+    "system": "سیستم",
+    "title": "تنظیمات تم",
+    "selectTheme": "انتخاب تم",
+    "autoTheme": "تم خودکار",
+    "customTheme": "تم سفارشی"
   },
   "language": {
     "en": "English",
-    "fa": "فارسی"
+    "fa": "فارسی",
+    "title": "تنظیمات زبان",
+    "selectLanguage": "انتخاب زبان",
+    "currentLanguage": "زبان فعلی",
+    "languagePreference": "ترجیح زبان"
+  },
+  "notifications": {
+    "title": "اعلان‌ها",
+    "markAllRead": "علامت‌گذاری همه به عنوان خوانده شده",
+    "noNotifications": "اعلان جدیدی وجود ندارد",
+    "newOrder": "سفارش جدید دریافت شد",
+    "lowStock": "هشدار موجودی کم",
+    "orderShipped": "سفارش ارسال شد",
+    "orderDelivered": "سفارش تحویل داده شد"
+  },
+  "errors": {
+    "general": "مشکلی پیش آمد",
+    "network": "خطای شبکه",
+    "unauthorized": "دسترسی غیرمجاز",
+    "notFound": "منبع یافت نشد",
+    "validation": "خطای اعتبارسنجی",
+    "server": "خطای سرور"
+  },
+  "success": {
+    "saved": "تغییرات با موفقیت ذخیره شد",
+    "deleted": "مورد با موفقیت حذف شد",
+    "created": "مورد با موفقیت ایجاد شد",
+    "updated": "مورد با موفقیت بروزرسانی شد",
+    "uploaded": "فایل با موفقیت آپلود شد"
   }
 }

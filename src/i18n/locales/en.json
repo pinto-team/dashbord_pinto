@@ -31,7 +31,43 @@
     "unit": "Unit",
     "supplier": "Supplier",
     "image": "Image",
-    "description": "Description"
+    "description": "Description",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout",
+    "view": "View",
+    "update": "Update",
+    "create": "Create",
+    "remove": "Remove",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "reset": "Reset",
+    "download": "Download",
+    "upload": "Upload",
+    "export": "Export",
+    "import": "Import",
+    "refresh": "Refresh",
+    "sort": "Sort",
+    "select": "Select",
+    "all": "All",
+    "none": "None",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Information"
+  },
+  "sidebar": {
+    "dashboardDesc": "View overview and analytics",
+    "productsDesc": "Manage product inventory",
+    "customersDesc": "View customer information",
+    "ordersDesc": "Handle pending orders",
+    "historyDesc": "View order history"
   },
   "dashboard": {
     "title": "Dashboard",
@@ -44,7 +80,14 @@
     "salesChart": "Sales Chart",
     "thisMonth": "This Month",
     "lastMonth": "Last Month",
-    "thisYear": "This Year"
+    "thisYear": "This Year",
+    "overview": "Overview",
+    "analytics": "Analytics",
+    "quickActions": "Quick Actions",
+    "recentActivity": "Recent Activity",
+    "performance": "Performance",
+    "trends": "Trends",
+    "insights": "Insights"
   },
   "products": {
     "title": "Products",
@@ -59,7 +102,16 @@
     "productDescription": "Product Description",
     "lowStock": "Low Stock",
     "outOfStock": "Out of Stock",
-    "inStock": "In Stock"
+    "inStock": "In Stock",
+    "manageProducts": "Manage Products",
+    "productDetails": "Product Details",
+    "inventory": "Inventory",
+    "categories": "Categories",
+    "suppliers": "Suppliers",
+    "barcode": "Barcode",
+    "sku": "SKU",
+    "weight": "Weight",
+    "dimensions": "Dimensions"
   },
   "customers": {
     "title": "Customers",
@@ -69,7 +121,15 @@
     "customerAddress": "Customer Address",
     "totalOrders": "Total Orders",
     "totalSpent": "Total Spent",
-    "lastOrder": "Last Order"
+    "lastOrder": "Last Order",
+    "customerDetails": "Customer Details",
+    "customerList": "Customer List",
+    "addCustomer": "Add Customer",
+    "editCustomer": "Edit Customer",
+    "customerType": "Customer Type",
+    "registrationDate": "Registration Date",
+    "preferences": "Preferences",
+    "notes": "Notes"
   },
   "orders": {
     "title": "Orders",
@@ -83,7 +143,15 @@
     "processing": "Processing",
     "shipped": "Shipped",
     "delivered": "Delivered",
-    "cancelled": "Cancelled"
+    "cancelled": "Cancelled",
+    "orderDetails": "Order Details",
+    "orderItems": "Order Items",
+    "shippingAddress": "Shipping Address",
+    "billingAddress": "Billing Address",
+    "paymentMethod": "Payment Method",
+    "trackingNumber": "Tracking Number",
+    "estimatedDelivery": "Estimated Delivery",
+    "orderNotes": "Order Notes"
   },
   "modals": {
     "addProduct": "Add Product",
@@ -93,15 +161,52 @@
     "confirmDelete": "Confirm Delete",
     "deleteMessage": "Are you sure you want to delete this item?",
     "yes": "Yes",
-    "no": "No"
+    "no": "No",
+    "saveChanges": "Save Changes",
+    "discardChanges": "Discard Changes",
+    "loading": "Loading...",
+    "success": "Success",
+    "error": "Error"
   },
   "theme": {
     "light": "Light",
     "dark": "Dark",
-    "system": "System"
+    "system": "System",
+    "title": "Theme Settings",
+    "selectTheme": "Select Theme",
+    "autoTheme": "Auto Theme",
+    "customTheme": "Custom Theme"
   },
   "language": {
     "en": "English",
-    "fa": "فارسی"
+    "fa": "فارسی",
+    "title": "Language Settings",
+    "selectLanguage": "Select Language",
+    "currentLanguage": "Current Language",
+    "languagePreference": "Language Preference"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "markAllRead": "Mark All as Read",
+    "noNotifications": "No new notifications",
+    "newOrder": "New order received",
+    "lowStock": "Low stock alert",
+    "orderShipped": "Order shipped",
+    "orderDelivered": "Order delivered"
+  },
+  "errors": {
+    "general": "Something went wrong",
+    "network": "Network error",
+    "unauthorized": "Unauthorized access",
+    "notFound": "Resource not found",
+    "validation": "Validation error",
+    "server": "Server error"
+  },
+  "success": {
+    "saved": "Changes saved successfully",
+    "deleted": "Item deleted successfully",
+    "created": "Item created successfully",
+    "updated": "Item updated successfully",
+    "uploaded": "File uploaded successfully"
   }
 }
